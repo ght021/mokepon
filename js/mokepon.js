@@ -184,7 +184,6 @@ function crearMensaje (resultado) {
         sectionMensajeEnemigo.appendChild(nuevoMensajeEnemigo)
 }
 function crearMensajeFinal (resultadoFInal) {
-       +
         let sectionMensaje = document.getElementById('resultado')
         sectionMensaje.innerHTML = resultadoFInal
     
