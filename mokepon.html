@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8"/>
+        <title>MichiFigters</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <header>
+            <h1>MichiFigters</h1>
+        </header>
+        <main>
+            <section id="seleccionar-mascota">
+                <h1 class="titulo">Michi Fighters</h1>
+                <h2 id="titulo2">Elige tu Michi</h2>
+                <div class="tarjeta">
+                    <label class="tarjeta-de-pokemon" for="rayas">
+                        <p> Rayas </p>
+                        <img src="./Imagenes y recursos/Rayas.jpg" alt="Rayas">
+                    </label>
+                    <input type="radio" name="mascota" id="rayas"/>
+    
+                   <label class="tarjeta-de-pokemon" for="luna">
+                        <p> Luna</p>
+                        <img src="./Imagenes y recursos/Luna.jpg" alt="Luna">
+                    </label>
+                   <input type="radio" name="mascota" id="luna"/>
+                
+                   <label class="tarjeta-de-pokemon"for="bolas">
+                        <p> Bolas </p>
+                        <img src="./Imagenes y recursos/Bolas.jpg" alt="Bolas">
+                    </label>
+                   <input type="radio" name="mascota" id="bolas"/>
+                
+                   <label class="tarjeta-de-pokemon" for="cortana">
+                        <p> Cortana </p>
+                        <img src="./Imagenes y recursos/Cortana.jpg" alt="Cortana">
+                    </label>
+                   <input type="radio" name="mascota" id="cortana"/>
+                
+                   <label class="tarjeta-de-pokemon" for="champis">
+                        <p> Champis </p>
+                        <img src="./Imagenes y recursos/Champis.jpg" alt="Champis">
+                    </label>
+                   <input type="radio" name="mascota" id="champis"/>
+                
+                   <label class="tarjeta-de-pokemon" for="blanquis">
+                    <p> Blanquis </p>
+                    <img src="./Imagenes y recursos/Blanquita.jpg" alt="Blanquis">
+                   </label>
+                   <input type="radio" name="mascota" id="blanquis"/>       
+                </div>
+                <button class="boton1" id="boton-mascota">Seleccionar</button>
+            </section>
+            <section id="seleccion-ataque">
+                <h1 class="titulo">Michi Fighters</h1>
+                <h2 id="titulo2">Elige tu ataque</h2>
+                <div id="boton-ataque">
+                    <button class="boton2" id="boton-fuego">Fuego 🔥</button>
+                    <button class="boton2" id="Boton-agua">Agua 💧</button>
+                    <button class="boton2" id="Boton-tierra">Tierra 🪨</button>
+                    <button class="boton2" id="Boton-planta">Planta 🌱</button>
+                </div>
+                <div>
+                    <!-- <section id="mensaje"> -->
+                        <p id="resultado">!Suerte¡    
+                        <section id="reiniciar">
+                            <button class="boton" id="boton-reiniciar">reiniciar</button>      
+                        </section>
+                        </p>
+                </div>
+                <div class="ataques" id="resultadosfinales">
+                    <div>
+                        <p id="vidas-jugador">3</p>
+                        <p id="mascota-jugador"></p>
+                        <p id="ataque-del-jugador"></p>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p id="vidas-enemigo">3</p>
+                        <p id="mascota-enemigo"></p>
+                        <p id="ataque-del-enemigo"></p>
+                    </div> 
+                </div>
+            </section>
+        </main>
+        <footer>Esto es el footer</footer>
+        <script src="./js/mokepon.js"></script>
+    </body>
+</html>

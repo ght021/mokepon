@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'titulo';
+    src: url(./AvocadoCakeDemo.otf);
+    }
+@font-face {
+    font-family: 'titulo2';
+    src: url(./Prisma.ttf);
+    }
+@font-face {
+    font-family: 'texto-comun';
+    src: url(./X-PRISMA.ttf);
+    }
+@font-face {
+    font-family: 'texto-boton';
+    src: url(./Silkscreen-Regular.ttf);
+    }
+body {
+    background-color: #100720;
+}
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 700px;
+    margin: auto;
+    font-family: 'titulo2';
+    color: #FFC23C;
+    /* background-color: #31087B; */
+    align-items: center;
+}
+input {
+    display: none;
+}
+.titulo {
+    color: #FA2FB5;
+    width: 285px;
+    height: 167px;
+    /* background-color: #31087B; */
+    /* margin: unset; */
+    font-family: 'titulo';
+    font-size: 70px;
+    /* display: flex; */
+    /* flex-wrap: nowrap;*/
+}
+#titulo2 {
+    /*background-color: #31087B;*/
+    padding: 10px;
+    border: 5px;
+    margin: 30px;
+}
+#seleccion-ataque {
+    display: flex;
+    width: 318px;
+    height: 300px;
+    font-style: oblique;
+    text-align: center;
+    margin: auto;
+    font-family: 'titulo2';
+    color: #FFC23C;
+    /* background-color: #31087B; */
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+.tarjeta {
+    display: flex;
+    gap: 1px;
+}
+.tarjeta-de-pokemon {
+    width: 120px;
+    height: 150px;
+    background-color: #31087B;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 5px;
+    text-align: center;
+    border-radius: 20px;
+    color: #FFC23C 
+}
+.tarjeta-de-pokemon img{
+    width: 80px;
+}
+.boton1 {
+    background: #31087B;
+    color: #FFC23C;
+    border-radius: 20px;
+    font-family: 'texto-boton';
+    width: 200px;
+    height: 90px;
+    font-size: 23px;
+}
+#boton-ataque {
+    display: flex;
+}
+.boton2 {
+    background: #31087B;
+    color: #FFC23C;
+    border-radius: 20px;
+    font-family: 'texto-boton';
+    width: 160px;
+    height: 60px;
+    font-size: 23px;
+}
+.mensaje {
+    text-align: center;
+    width: 340px;
+    height: 200px;
+    margin: auto;
+    font-family: 'texto-comun';
+    color: #FFC23C;
+}
+.mensaje2 {
+    text-align: center;
+    width: 340px;
+    height: 200px;
+    margin: auto;
+    font-family: 'texto-boton';
+    color: #FFC23C;
+}
+#resultado {
+    width: 635px;
+    height: 108px;
+    background-color: #FFC23C;
+    /* padding: 1px; */
+    box-sizing: border-box;
+    margin: 25px;
+    /* text-align: center; */
+    border-radius: 3px;
+    color: #FA2FB5;
+    font-size: 40px;
+}
+#boton-reiniciar {
+    border: none;
+    color: #100720;
+    font-family: 'texto-boton';
+    background-color: #FFC23C;
+    font-size: 40px;
+    border-radius: 20px;}
+.ataques {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    font-family: 'texto-boton';
+    color:#FFC23C;
+    background-color: #31087B;
+    justify-content: center;
+}
