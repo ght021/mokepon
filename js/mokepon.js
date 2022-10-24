@@ -105,54 +105,78 @@ function ataqueAleatorioEnemigo(){
 function combate(){
     let spanVidasJugador = document.getElementById('vidas-jugador')
     let spanVidasEnemigo = document.getElementById('vidas-enemigo')
+
+  /*  // tipos de datos:
+    'asdasdasd' // string
+    2656565 // number
+    true - false // boolean
+    const objetito = {properties: 'value', soyObjeto: true} //obj  
+    objetito.properties //value
+
+    function soyUnaFuncion(){
+        return 'hola'
+    }
+
+    const arreglito = ['jasdasd', 54464, {hola: 'lalala'}, [], function(), true] //array
+    const arreglito2 = ['jasdasd', 54464, objetito, arreglito, soyUnaFuncion] //array
+    arreglito[0] //'jasdasd'
+    arreglito[2].hola //lalalala
+    const funcion = arreglito2[5];
+
+    arreglito.map(item => console.log(item)) */
+
+
+
+
+
     if(ataqueEnemigo === ataqueJugador) {
-        crearMensaje("Empate")
+        crearMensaje("Empate", ataqueEnemigo, ataqueJugador)
     } else if(ataqueJugador === 'FUEGO' && ataqueEnemigo === 'TIERRA') {
-        crearMensaje("PERDISTE")
+        crearMensaje("PERDISTE", ataqueEnemigo, ataqueJugador)
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
     } else if(ataqueJugador === 'FUEGO' && ataqueEnemigo === 'PLANTA') {
-        crearMensaje("GANASTE")
+        crearMensaje("GANASTE", ataqueEnemigo, ataqueJugador)
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if(ataqueJugador === 'FUEGO' && ataqueEnemigo === 'AGUA') {
-        crearMensaje("PERDISTE")
+        crearMensaje("PERDISTE", ataqueEnemigo, ataqueJugador)
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
     } else if(ataqueJugador === 'AGUA' && ataqueEnemigo === 'FUEGO') {
-        crearMensaje("GANASTE")
+        crearMensaje("GANASTE", ataqueEnemigo, ataqueJugador)
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if(ataqueJugador === 'AGUA' && ataqueEnemigo === 'PLANTA') {
-        crearMensaje("PERDISTE")
+        crearMensaje("PERDISTE", ataqueEnemigo, ataqueJugador)
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
     } else if(ataqueJugador === 'AGUA' && ataqueEnemigo === 'TIERRA') {
-        crearMensaje("GANASTE")
+        crearMensaje("GANASTE", ataqueEnemigo, ataqueJugador)
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if(ataqueJugador === 'TIERRA' && ataqueEnemigo === 'FUEGO') {
-        crearMensaje("GANASTE")
+        crearMensaje("GANASTE", ataqueEnemigo, ataqueJugador)
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if(ataqueJugador === 'TIERRA' && ataqueEnemigo === 'PLANTA') {
-        crearMensaje("PERDISTE")
+        crearMensaje("PERDISTE", ataqueEnemigo, ataqueJugador)
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
     } else if(ataqueJugador === 'TIERRA' && ataqueEnemigo === 'AGUA') {
-        crearMensaje("PERDISTE")
+        crearMensaje("PERDISTE", ataqueEnemigo, ataqueJugador)
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
     } else if(ataqueJugador === 'PLANTA' && ataqueEnemigo === 'TIERRA') {
-        crearMensaje("GANASTE")
+        crearMensaje("GANASTE", ataqueEnemigo, ataqueJugador)
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if(ataqueJugador === 'PLANTA' && ataqueEnemigo === 'AGUA') {
-        crearMensaje("GANASTE")
+        crearMensaje("GANASTE", ataqueEnemigo, ataqueJugador)
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if(ataqueJugador === 'PLANTA' && ataqueEnemigo === 'FUEGO') {
-        crearMensaje("PERDISTE")
+        crearMensaje("PERDISTE", ataqueEnemigo, ataqueJugador)
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
     } 
@@ -166,22 +190,22 @@ function revisarVidas () {
 
         }
 }
-function crearMensaje (resultado) {
+function crearMensaje (resultado, ataqueEnemigo, ataqueJugador) {
         let sectionMensaje = document.getElementById('resultado')
         let sectionMensajeJugador = document.getElementById('ataque-del-jugador')
         let sectionMensajeEnemigo = document.getElementById('ataque-del-enemigo')
 
-        //let notificacion = document.createElement('p')
-        let nuevoMensajeJugadoro = document.createElement('p')
-        let nuevoMensajeEnemigo = document.createElement('p')
+       // let notificacion = document.createElement('p')
+        //let nuevoMensajeJugadoro = document.createElement('p')
+        //let nuevoMensajeEnemigo = document.createElement('p')
 
-        //notificacion.innerHTML = resultado
-        nuevoMensajeJugadoro.innerHTML = sectionMensajeJugador
-        nuevoMensajeEnemigo.innerHTML = sectionMensajeEnemigo
+        sectionMensaje.innerHTML = resultado
+        sectionMensajeJugador.innerHTML = ataqueJugador
+        sectionMensajeEnemigo.innerHTML = ataqueEnemigo
         
-        //sectionMensaje.appendChild(notificacion)
-        sectionMensajeJugador.appendChild(nuevoMensajeJugadoro)
-        sectionMensajeEnemigo.appendChild(nuevoMensajeEnemigo)
+        //sectionMensaje.innerHTML=notificacion;
+        //sectionMensajeJugador.appendChild(nuevoMensajeJugadoro)
+        //sectionMensajeEnemigo.appendChild(nuevoMensajeEnemigo)
 }
 function crearMensajeFinal (resultadoFInal) {
         let sectionMensaje = document.getElementById('resultado')
