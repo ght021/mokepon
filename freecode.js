@@ -190,7 +190,7 @@ function sumar(a, b){
     console.log("el resultado de " + a + " + " + b + " es: " + suma);
 }
 
-//sumar(5, 3);
+sumar(5, 3);
 
 var x = 5
 var y = 3
@@ -213,3 +213,19 @@ function crearCadenaConMeta (lenguajeDeProgramacion) {
 var miMeta = crearCadenaConMeta("javascript");
 console.log(miMeta)
 
+function proximoEnLaFila (arr, elemento) {
+    arr.push(elemento); //agregrar al final del arreglo
+    return arr.shift(); // remover el primer elememnto
+
+}
+
+var miArr = [1, 2, 3, 4, 5];
+
+console.log("Antes: " + JSON.stringify(miArr));
+
+console.log(proximoEnLaFila(miArr, 6));
+
+console.log("Despues: " + JSON.stringify(miArr));
+
+console.log(true)
+console.log(false)
